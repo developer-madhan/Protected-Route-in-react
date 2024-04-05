@@ -2,6 +2,12 @@ import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Container } from "react-bootstrap";
+import Home from "./pages/Home/Home";
+import Login from "./pages/Login/Login";
+import Admin from "./pages/Admin/Admin";
+import NoPage from "./pages/NoPage/NoPage";
+import User from "./pages/User/User";
+import UserProfile from "./pages/User/UserProfile";
 
 const USER_TYPES = {
   PUBLIC: "public_user",
@@ -10,64 +16,7 @@ const USER_TYPES = {
 };
 
 const CURRENT_USER_TYPE = USER_TYPES.ADMIN;
-
-const Home = () => {
-  return (
-    <div>
-      <Container>
-        <h1>Home</h1>
-      </Container>
-    </div>
-  );
-};
-const Login = () => {
-  return (
-    <div>
-      <Container>
-        <h1>Login</h1>
-      </Container>
-    </div>
-  );
-};
-
-const User = () => {
-  return (
-    <div>
-      <Container>
-        <h1>User</h1>
-      </Container>
-    </div>
-  );
-};
-
-const Admin = () => {
-  return (
-    <div>
-      <Container>
-        <h1>Admin </h1>
-      </Container>
-    </div>
-  );
-};
-const UserProfile = () => {
-  return (
-    <div>
-      <Container>
-        <h1>UserProfile </h1>
-      </Container>
-    </div>
-  );
-};
-const NoPage = () => {
-  return (
-    <div>
-      <Container>
-        <h1>404 this page not here </h1>
-      </Container>
-    </div>
-  );
-};
-
+  
 const PublicElement = ({ children }) => {
   return <>{children}</>;
 };
