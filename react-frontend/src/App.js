@@ -7,6 +7,7 @@ import Login from "./compounds/pages/login/Login.js";
 import Dashboard from "./compounds/pages/dashboard/Dashboard.js";
 // Instead of Redirect, use Navigate
 import { Navigate } from "react-router-dom";
+import NoPage from "./compounds/pages/NoPage.jsx";
 
 const App = () => {
   const isAuthenticated = true; // You should implement your own authentication logic
@@ -19,7 +20,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         {/* Other routes */}
         {/* Finally, a catch-all route */}
-        <Route path="*" element={<Navigate to="/404" />} />
+        <Route path="*" element={<NoPage />} />
       </Routes>
     </Router>
   );
